@@ -1,0 +1,106 @@
+@import "./fonts.scss";
+
+body {
+    background: #FFFFFF;
+    color: #222748;
+    font-family: "Muller", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    overflow-x: hidden;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    margin: 0px auto;
+    max-width: 1260px;
+    padding: 0px 30px;
+    height: 100%;
+    width: 100%;
+}
+
+.btn {
+    background: linear-gradient(90deg, #777EFF 0%, #8B98FF 51.56%, #4C69FF 100%);
+    box-shadow: 0px 15px 30px 0px #858BFF;
+    border-radius: 20px;
+    color: #FFFFFF;
+    font-weight: 700;
+    position: relative;
+    text-transform: uppercase;
+}
+
+.main-content {
+    flex: 1 0 auto;
+}
+
+.notify {
+    align-items: center;
+    display: flex;
+    background: #000000;
+    box-shadow: 0px 0px 53px 0px rgba(81, 78, 120, 0.18);
+    border-radius: 15px;
+    padding: 20px;
+    opacity: 0;
+    pointer-events: none;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transition: all 0.1s linear;
+    transform: translate(-50%, -50%);
+    z-index: 3;
+
+    &__text {
+        color: #FFFFFF;
+        font-size: 16px;
+        font-weight: 500;
+        margin-left: 20px;
+        text-transform: uppercase;
+    }
+
+    &.active {
+        opacity: 1;
+        pointer-events: auto;
+    }
+}
+
+
+@import "./header.scss";
+
+@import "./home-section.scss";
+
+@import "./services-section.scss";
+
+@import "./main-sections.scss";
+
+@import "./about-section.scss";
+
+@import "./hotspot-section.scss";
+
+@import "./contacts-section.scss";
+
+@import "./footer.scss";
+
+
+@media(hover: hover) {
+    .btn:hover {
+        background: #A5A9FF;
+    }
+
+    .btn:active {
+        background: #222748;
+    }
+}
+
+@media(max-width: 1600px) {
+    .container {
+        max-width: 1000px;
+    }
+}
+
+@media(max-width: 767px) {
+    .container {
+        padding: 0px;
+        max-width: 100%;
+        width: 100%;
+    }
+}

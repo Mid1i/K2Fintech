@@ -1,0 +1,29 @@
+.main-footer {
+    border-top: 1px solid #EDEDED;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 35px 0px 50px;
+
+    &__top {
+        font-size: 16px;
+        margin-bottom: 25px;
+        text-align: center;
+    }
+
+    &__bottom {
+        text-align: center;
+        
+        & span {
+            color: #7E8FFF;
+            text-decoration-line: underline;
+        }
+    }
+}
+
+
+@media(max-width: 767px) {
+    .main-footer {
+        padding: 25px 0px 40px;
+    }
+}

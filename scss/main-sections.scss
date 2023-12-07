@@ -1,0 +1,382 @@
+.banks-section {
+    background: url("../assets/images/backgrounds/banks-section-back.png") center center no-repeat;
+    background-size: cover;
+}
+
+.fintech-section {
+    background: url("../assets/images/backgrounds/fintech-section-back.png") center center no-repeat;
+    background-size: cover;
+}
+
+.crypto-section {
+    background: url("../assets/images/backgrounds/crypto-section-back.png") center center no-repeat;
+    background-size: cover;
+}
+
+.section {
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    margin: 50px 0px;
+    padding: 50px 50px 40px;
+
+    &-title {
+        font-size: 60px;
+        font-weight: 900;
+        max-width: 560px;
+        margin-bottom: 10px;
+        text-transform: uppercase;
+        
+        &--hotspot {
+            color: #FFFFFF;
+        }
+
+        & span {
+            color: #7E8FFF;
+        }
+    }
+    
+    &-subtitle {
+        font-size: 22px;
+        font-weight: 700;
+        max-width: 710px;
+        margin-bottom: 25px;
+        text-transform: uppercase;
+
+        &--hotspot {
+            color: #FFFFFF;
+        }
+    }
+
+    &-text {
+        font-size: 18px;
+        font-weight: 500;
+        max-width: 680px;
+        margin-bottom: 20px;
+
+        &--hotspot {
+            color: #FFFFFF;
+            font-weight: 400;
+            max-width: 100%;
+        }
+
+        &--banks {
+            align-items: center;
+            display: flex;
+            position: relative;
+        }
+
+        &--table {
+            font-weight: 400;
+            padding: 15px 15px 5px;
+            max-width: 100%;
+        }
+
+        &--no-margin {
+            margin-bottom: 0px;
+        }
+
+        &--last {
+            color: #525676;
+            padding: 0px 15px 0px;
+        }
+
+        &__end {
+            color: #7E8FFF;
+            margin-left: 5px;
+        }
+
+        &__icon {
+            cursor: pointer;
+            margin-left: 15px;
+        }
+
+        &__triangle {
+            top: 25px;
+            left: 231px;
+
+            &--german {
+                left: 221px;
+            }
+        }
+
+        &__info {
+            top: 35px;
+        }
+
+        &__bold {
+            font-weight: 700;
+        }
+
+        &__big {
+            font-size: 20px;
+            font-weight: 700;
+            margin-bottom: 20px;
+
+            &--upper {
+                text-transform: uppercase;
+            }
+        }
+    }
+
+    &-list {
+        backdrop-filter: blur(9.45px);
+        background: rgba(255, 255, 255, 0.5);
+        box-shadow: -14px 43px 53px 0px rgba(81, 78, 120, 0.18);
+        border-radius: 15px;
+        display: flex;
+        flex-direction: column;
+        max-width: 690px;
+        margin-bottom: 30px;
+        padding: 20px 40px 0px 35px;
+        position: relative;
+        z-index: 1;
+
+        &__icon {
+            cursor: pointer;
+            position: absolute;
+            right: 15px;
+            top: 15px;
+            transition: all 0.1s linear;
+            z-index: 2;
+        }
+
+        &__el {
+            font-size: 16px;
+            list-style: url("../assets/images/icons/list-icon--small.svg");
+            margin-bottom: 20px;
+            position: relative;
+            max-width: 630px;
+
+            & span {
+                color: #7E8FFF;
+                font-weight: 700;
+            }
+
+            &--bold {
+                color: #222748 !important;
+            }
+        }
+
+        &__triangle {
+            top: 40px;
+            right: 12px;
+        }
+
+        &__info {
+            top: 50px;
+            height: auto;
+            width: 100%;
+        }
+    }
+
+    &-list__icon,
+    &-text__icon {
+        opacity: 1;
+
+        &.active {
+            opacity: 0.6;
+        }
+    }
+
+    &-list__triangle,
+    &-text__triangle {
+        opacity: 0;
+        position: absolute;
+        transition: all 0.1s linear;
+        height: 32px;
+        width: 32px;
+
+        &.active {
+            opacity: 1;
+        }
+    }
+
+    &-list__info,
+    &-text__info {
+        background: #FFFFFF;
+        border-radius: 15px;
+        font-size: 14px;
+        opacity: 0;
+        pointer-events: none;
+        padding: 20px;
+        position: absolute;
+        left: 0px;
+        transition: all 0.1s linear;
+        z-index: 1;
+
+        &.active {
+            opacity: 1;
+            pointer-events: auto;
+        }
+
+        & span {
+            font-weight: 700;
+        }
+    }
+
+    &-content {
+        display: flex;
+        justify-content: space-between;
+
+        &__left,
+        &__right {
+            display: flex;
+            flex: 0 0 48%;
+            flex-direction: column;
+        }
+    }
+
+    &-btn {
+        margin-bottom: 30px;
+        height: 73px;
+        width: 230px;
+    }
+}
+
+
+@media(max-width: 1600px) {
+    .section {
+        padding: 30px 30px 0px;
+
+        &-title {
+            font-size: 48px;
+        }
+
+        &-subtitle {
+            font-size: 20px;
+        }
+
+        &-text {
+            font-size: 16px;
+            max-width: 600px;
+
+            &__big {
+                font-size: 18px;
+            }
+
+            &__triangle {
+                left: 208px;
+
+                &--german {
+                    left: 198px;
+                }
+            }
+        }
+
+        &-list__el {
+            font-size: 14px;
+            max-width: 600px;
+        }
+    }
+}
+
+@media(max-width: 767px) {
+    .section {
+        padding: 20px 20px 0px;
+        margin: 30px;
+
+        &-title {
+            margin-bottom: 20px;
+
+            &--contacts {
+                font-size: 36px;
+            }
+        }
+
+        &-subtitle {
+            font-size: 16px;
+            margin-bottom: 20px;
+        }
+
+        &-text {
+            font-size: 14px;
+            margin-left: 15px;
+
+            &--table,
+            &--hotspot {
+                margin-left: 0px;
+            }
+
+            &__icon {
+                height: 16px;
+                width: 16px;
+            }
+
+            &__info {
+                font-size: 12px;
+                top: 25px;
+            }
+
+            &__triangle {
+                top: 18px;
+                left: 180px;
+            }
+
+            &__big {
+                font-size: 16px;
+                margin-left: 15px;
+                margin-bottom: 15px;
+
+                &-hotspot,
+                &--contacts {
+                    margin-left: 0px;
+                }
+            }
+        }
+
+        &-list {
+            padding: 15px 30px 0px 30px;
+            margin-left: 15px;
+
+            &__icon {
+                top: 10px;
+                right: 10px;
+                height: 16px;
+                width: 16px;
+            }
+
+            &__el {
+                font-size: 12px;
+                margin-bottom: 15px;
+            }
+
+            &__triangle {
+                top: 30px;
+                right: 2px;
+            }
+
+            &__info {
+                font-size: 12px;
+                top: 40px;
+            }
+        }
+
+        &-content {
+            flex-direction: column;
+        }
+    }
+}
+
+@media(max-width: 460px) {
+    .banks-section {
+        background: url("../assets/images/backgrounds/banks-section-back--small.png") center center no-repeat;
+        background-size: cover;
+    }
+
+    .fintech-section {
+        background: url("../assets/images/backgrounds/fintech-section-back--small.png") center center no-repeat;
+        background-size: cover;
+    }
+
+    .crypto-section {
+        background: url("../assets/images/backgrounds/crypto-section-back--small.png") center center no-repeat;
+        background-size: cover;
+    }
+}
+
+@media(max-width: 375px) {
+    .section {
+        margin: 30px 5px;
+    }
+}

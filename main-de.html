@@ -1,0 +1,790 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>K2Fintech</title>
+    <!-- Adaptive -->
+    <meta name="viewport" content="width=device-width, viewport-fit=cover">
+    <!-- Connecting CSS styles -->
+    <link rel="stylesheet" href="./css/default.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <!-- Connecting jQuery -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script> 
+</head>
+<body>
+    <div class="container">
+        <div class="main-header__back-img"></div>
+        <header class="main-header">
+            <div class="main-header__top">
+                <h5 class="main-header__top-title"><span>K2</span>Fintech</h5>
+                <div class="main-header__top-btns header-btns">
+                    <div class="header-btns__lang">
+                        <a class="header-btns__lang-link" href="{{ MAIN-EN_URL }}">
+                            <img alt="en" src="./assets/images/languages/english-lang.svg">
+                        </a>
+                        <span class="header-btns__lang-link header-btns__lang-link--active">
+                            <img alt="de" src="./assets/images/languages/german-lang.svg">
+                        </span>
+                    </div>
+                    <button class="header-btns__btn" id="contacts">Kontakt aufnehmen</button>
+                </div>
+                <img class="main-header__top-burger" src="./assets/images/icons/burger-menu.svg" alt="menu-burger">
+            </div>
+            <nav class="main-header__bottom">
+                <ul class="main-header__bottom-list nav-list">
+                    <li class="nav-list__el nav-list__el--active" id="home">Home</li>
+                    <li class="nav-list__el" id="banks">Für banken</li>
+                    <li class="nav-list__el" id="fintech">Für fintech</li>
+                    <li class="nav-list__el" id="crypto">Für crypto</li>
+                    <li class="nav-list__el" id="about">Über uns</li>
+                    <li class="nav-list__el" id="hotspot">Hotspot</li>
+                </ul>
+            </nav>
+            <div class="main-header__sticky hidden">
+                <div class="main-header__sticky-wrapper top-menu">
+                    <ul class="top-menu__list">
+                        <li class="top-menu__list-el top-menu__list-el--home" id="home">Home</li>
+                        <li class="top-menu__list-el top-menu__list-el--banks" id="banks">Für banken</li>
+                        <li class="top-menu__list-el top-menu__list-el--fintech" id="fintech">Für fintech</li>
+                        <li class="top-menu__list-el top-menu__list-el--crypto" id="crypto">Für crypto</li>
+                        <li class="top-menu__list-el top-menu__list-el--about" id="about">Über uns</li>
+                        <li class="top-menu__list-el top-menu__list-el--hotspot" id="hotspot">Hotspot</li>
+                    </ul> 
+                    <div class="top-menu__right">
+                        <div class="top-menu__right-lang lang-sticky">
+                            <a class="lang-sticky__link" href="{{ MAIN-EN_URL }}">
+                                <img src="./assets/images/languages/english-lang.svg" alt="en">
+                            </a>
+                            <span class="lang-sticky__link lang-sticky__link--active">
+                                <img src="./assets/images/languages/german-lang.svg" alt="de">
+                            </span>
+                        </div>
+                        <p class="top-menu__right-text" id="contacts">Kontakt aufnehmen</p>
+                    </div>
+                </div>
+            </div>
+            <div class="main-header__popup">
+                <img alt="close" class="main-header__popup-cross" src="./assets/images/icons/cross-icon.svg">
+                <ul class="main-header__popup-list popup-nav">
+                    <li class="popup-nav__el" id="home">Home</li>
+                    <li class="popup-nav__el" id="banks">Für banken</li>
+                    <li class="popup-nav__el" id="fintech">Für fintech</li>
+                    <li class="popup-nav__el" id="crypto">Für crypto</li>
+                    <li class="popup-nav__el" id="about">Über uns</li>
+                    <li class="popup-nav__el" id="hotspot">Hotspot</li>
+                </ul>
+                <div class="main-header__popup-lang lang-switcher">
+                    <a class="lang-switcher__link" href="{{ MAIN-EN_URL }}">
+                        <img src="./assets/images/languages/english-lang.svg" alt="en">
+                        <span class="lang-switcher__link-text">English</span>
+                    </a>
+                    <span class="lang-switcher__link lang-switcher__link--active">
+                        <img src="./assets/images/languages/german-lang.svg" alt="de">
+                        <span class="lang-switcher__link-text lang-switcher__link-text--active">Deutsch</span>
+                    </span>
+                </div>
+                <button class="main-header__popup-btn" id="contacts">Kontakt aufnehmen</button>
+            </div>
+        </header>
+        <main class="main-content">
+            <div class="main-content__home-section home-section" id="home-section">
+                <h3 class="home-section__title">K2 Fintech</h3>
+                <h1 class="home-section__subtitle">erstellen sie ihre <span>bank</span> mit uns</h1>
+                <p class="home-section__text">
+                    <img alt="money" class="home-section__text-icon" src="./assets/images/icons/money-icons.png">
+                    <span>Module können separat oder als schlüsselfertige Komplettlösung erworben werden</span>                
+                </p>
+                <button class="home-section__btn  home-section__btn--german btn" id="services">Unsere Dienstleistungen</button>
+            </div>
+            <div class="main-content__accordion-section accordion-section" id="services-section">
+                <div class="accordion-section__left">
+                    <div class="accordion-section__left-item accordion-item">
+                        <div class="accordion-item__top">
+                            <p class="accordion-item__top-text" id="tab-1-title">Client-schnittstelle</p>
+                            <button class="accordion-item__top-btn" data-tab="tab-1">
+                                <svg width="19" height="19" viewBox="0 0 19 19">
+                                    <rect x="8.14286" width="2.71429" height="19" rx="1.35714" fill="#7E8FFF"/>
+                                    <rect x="19" y="8.14307" width="2.71429" height="19" rx="1.35714" transform="rotate(90 19 8.14307)" fill="#7E8FFF"/>
+                                </svg>
+                            </button>
+                        </div>
+                        <div class="accordion-item__content" id="tab-1">
+                            <p class="accordion-item__content-text">Wir bieten unseren Kunden einen Zugang zu Finanzdienstleistungen über das Web oder mobilen Apps.</p>
+                            <p class="accordion-item__content-text">Die bieten den Kunden einen Zugang:</p> 
+                            <ul class="accordion-item__content-list accordion-list">
+                                <li class="accordion-list__el">
+                                    <img alt="icon" src="./assets/images/icons/list-icon.svg">
+                                    <span>Online-Einbindung und KYC</span>
+                                </li>
+                                <li class="accordion-list__el">
+                                    <img alt="icon" src="./assets/images/icons/list-icon.svg">
+                                    <span>Mehrwährungskonten</span>
+                                </li>
+                                <li class="accordion-list__el">
+                                    <img alt="icon" src="./assets/images/icons/list-icon.svg">
+                                    <span>Mehrere Zahlungskarten</span>
+                                </li>
+                                <li class="accordion-list__el">
+                                    <img alt="icon" src="./assets/images/icons/list-icon.svg">
+                                    <span>SEPA- und SWIFT-Überweisungen</span>
+                                </li>
+                                <li class="accordion-list__el">
+                                    <img alt="icon" src="./assets/images/icons/list-icon.svg">
+                                    <span>Direktüberweisungen nach Telefonnummer</span>
+                                </li>
+                                <li class="accordion-list__el">
+                                    <img alt="icon" src="./assets/images/icons/list-icon.svg">
+                                    <span>Karte-zu-Karte-Überweisungen</span>
+                                </li>
+                                <li class="accordion-list__el">
+                                    <img alt="icon" src="./assets/images/icons/list-icon.svg">
+                                    <span>Geschichte der Transaktionen</span>
+                                </li>
+                                <li class="accordion-list__el">
+                                    <img alt="icon" src="./assets/images/icons/list-icon.svg">
+                                    <span>Cashback-Programme</span>
+                                </li>
+                                <li class="accordion-list__el">
+                                    <img alt="icon" src="./assets/images/icons/list-icon.svg">
+                                    <span>Mehrere Aufladeoptionen, einschließlich vorausbezahlter Rubbelkarten</span>
+                                </li>
+                                <li class="accordion-list__el">
+                                    <img alt="icon" src="./assets/images/icons/list-icon.svg">
+                                    <span>Krypto-Währungsmodul zum Halten und sofortigen Austausch der Krypto-Assets</span>
+                                </li>
+                                <li class="accordion-list__el">
+                                    <img alt="icon" src="./assets/images/icons/list-icon.svg">
+                                    <span>Chat zur Kundenbetreuung</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="accordion-section__left-item accordion-item">
+                        <div class="accordion-item__top">
+                            <p class="accordion-item__top-text" id="tab-2-title">Bank crm</p>
+                            <button class="accordion-item__top-btn" data-tab="tab-2">
+                                <svg width="19" height="19" viewBox="0 0 19 19">
+                                    <rect x="8.14286" width="2.71429" height="19" rx="1.35714" fill="#7E8FFF"/>
+                                    <rect x="19" y="8.14307" width="2.71429" height="19" rx="1.35714" transform="rotate(90 19 8.14307)" fill="#7E8FFF"/>
+                                </svg>
+                            </button>
+                        </div>
+                        <div class="accordion-item__content" id="tab-2">
+                            <p class="accordion-item__content-text">СRM - Customer Relation Module sammelt und speichert Informationen über Benutzer und verfügt über Instrumente zur Überwachung der Einhaltung gesetzlicher Vorschriften.</p>
+                            <p class="accordion-item__content-text">Das CRM ist dazu in der Lage:</p> 
+                            <ul class="accordion-item__content-list accordion-list">
+                                <li class="accordion-list__el">
+                                    <img alt="icon" src="./assets/images/icons/list-icon.svg">
+                                    <span>Kundenanwendungen zu verwalten</span>
+                                </li>
+                                <li class="accordion-list__el">
+                                    <img alt="icon" src="./assets/images/icons/list-icon.svg">
+                                    <span>Kundenregistrierung in Anwendungen</span>
+                                </li>
+                                <li class="accordion-list__el">
+                                    <img alt="icon" src="./assets/images/icons/list-icon.svg">
+                                    <span>Verwendung verschiedener Methoden als zweiter Faktor</span>
+                                </li>
+                                <li class="accordion-list__el">
+                                    <img alt="icon" src="./assets/images/icons/list-icon.svg">
+                                    <span>Initiieren von Kundenzahlungen in Anwendungen</span>
+                                </li>
+                                <li class="accordion-list__el">
+                                    <img alt="icon" src="./assets/images/icons/list-icon.svg">
+                                    <span>Kunden-Chats zu verwalten</span>
+                                </li>
+                                <li class="accordion-list__el">
+                                    <img alt="icon" src="./assets/images/icons/list-icon.svg">
+                                    <span>Transaktionshistorie des Kunden anzeigen</span>
+                                </li>
+                                <li class="accordion-list__el">
+                                    <img alt="icon" src="./assets/images/icons/list-icon.svg">
+                                    <span>Zahlungen in Anwendungen importieren</span>
+                                </li>
+                                <li class="accordion-list__el">
+                                    <img alt="icon" src="./assets/images/icons/list-icon.svg">
+                                    <span>Auszug des Kunden exportieren</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="accordion-section__left-item accordion-item">
+                        <div class="accordion-item__top">
+                            <p class="accordion-item__top-text" id="tab-3-title">Automatisches banksystem</p>
+                            <button class="accordion-item__top-btn" data-tab="tab-3">
+                                <svg width="19" height="19" viewBox="0 0 19 19">
+                                    <rect x="8.14286" width="2.71429" height="19" rx="1.35714" fill="#7E8FFF"/>
+                                    <rect x="19" y="8.14307" width="2.71429" height="19" rx="1.35714" transform="rotate(90 19 8.14307)" fill="#7E8FFF"/>
+                                </svg>
+                            </button>
+                        </div>
+                        <div class="accordion-item__content" id="tab-3">
+                            <p class="accordion-item__content-text">ABS (Automatic Banking System) - ein anpassbares Buchhaltungs- und Berichtssystem, das so abgestimmt ist, dass es in Übereinstimmung mit den internationalen Rechnungslegungsstandards arbeitet. Das ABS ist vollständig integriert und schnittstellengebunden: Hauptbuch, Kreditorenbuchhaltung, Debitorenbuchhaltung und Anlagevermögen.</p>
+                            <p class="accordion-item__content-text">Das ABS ist vollständig integriert und schnittstellengebunden: Hauptbuch, Kreditorenbuchhaltung, Debitorenbuchhaltung und Anlagevermögen.</p> 
+                            <ul class="accordion-item__content-list accordion-list">
+                                <li class="accordion-list__el">
+                                    <img alt="icon" src="./assets/images/icons/list-icon.svg">
+                                    <span>Enthält ein integriertes Kassenbuch.</span>
+                                </li>
+                                <li class="accordion-list__el">
+                                    <img alt="icon" src="./assets/images/icons/list-icon.svg">
+                                    <span>Stellt die Budgetierungsmöglichkeiten zur Verfügung.</span>
+                                </li>
+                                <li class="accordion-list__el">
+                                    <img alt="icon" src="./assets/images/icons/list-icon.svg">
+                                    <span>Unterstützt Accruals/Ressourcen-basierte Buchhaltungspraktiken.</span>
+                                </li>
+                                <li class="accordion-list__el">
+                                    <img alt="icon" src="./assets/images/icons/list-icon.svg">
+                                    <span>Bietet alle Bildschirme, Dokumentationen und Hilfestellungen (am Bildschirm und elektronische/gedruckte Handbücher) in UK/US-Englisch.</span>
+                                </li>
+                            </ul>   
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-section__right">
+                    <div class="accordion-section__right-item accordion-item">
+                        <div class="accordion-item__top">
+                            <p class="accordion-item__top-text" id="tab-4-title">Fintech verwaltungssystem</p>
+                            <button class="accordion-item__top-btn" data-tab="tab-4">
+                                <svg width="19" height="19" viewBox="0 0 19 19">
+                                    <rect x="8.14286" width="2.71429" height="19" rx="1.35714" fill="#7E8FFF"/>
+                                    <rect x="19" y="8.14307" width="2.71429" height="19" rx="1.35714" transform="rotate(90 19 8.14307)" fill="#7E8FFF"/>
+                                </svg>
+                            </button>
+                        </div>
+                        <div class="accordion-item__content" id="tab-4">
+                            <p class="accordion-item__content-text">Das Fintech Application Management System bietet eine sichere Verbindung der Anwendungen mit dem Systemkern und verwaltet auch die Benutzerrechte und validiert die Zahlungsanträge der Benutzer.</p>
+                            <p class="accordion-item__content-text">Das System bietet:</p> 
+                            <ul class="accordion-item__content-list accordion-list">
+                                <li class="accordion-list__el">
+                                    <img alt="icon" src="./assets/images/icons/list-icon.svg">
+                                    <span>Unterstützung und Bereitstellung starker Authentifizierungskommunikation mit Anwendungen</span>
+                                </li>
+                                <li class="accordion-list__el">
+                                    <img alt="icon" src="./assets/images/icons/list-icon.svg">
+                                    <span>Unterstützung der Kommunikation mit AISP und PISP</span>
+                                </li>
+                                <li class="accordion-list__el">
+                                    <img alt="icon" src="./assets/images/icons/list-icon.svg">
+                                    <span>Unterstützung verschiedener Tools zur Zweite-Faktor-Authentifizierung</span>
+                                </li>
+                                <li class="accordion-list__el">
+                                    <img alt="icon" src="./assets/images/icons/list-icon.svg">
+                                    <span>Support-Warteschlange zur Sicherstellung der Kommunikation mit Anwendungen</span>
+                                </li>
+                                <li class="accordion-list__el">
+                                    <img alt="icon" src="./assets/images/icons/list-icon.svg">
+                                    <span>Unterstützung von Tunnelverschlüsselung zu Anwendungen zum Schutz sensibler Daten</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>       
+                    <div class="accordion-section__right-item accordion-item">
+                        <div class="accordion-item__top">
+                            <p class="accordion-item__top-text" id="tab-5-title">Zahlungsmodul mit aml</p>
+                            <button class="accordion-item__top-btn" data-tab="tab-5">
+                                <svg width="19" height="19" viewBox="0 0 19 19">
+                                    <rect x="8.14286" width="2.71429" height="19" rx="1.35714" fill="#7E8FFF"/>
+                                    <rect x="19" y="8.14307" width="2.71429" height="19" rx="1.35714" transform="rotate(90 19 8.14307)" fill="#7E8FFF"/>
+                                </svg>
+                            </button>
+                        </div>
+                        <div class="accordion-item__content" id="tab-5">
+                            <p class="accordion-item__content-text">Payment Module ist ein Modul, das alle eingehenden und ausgehenden Zahlungen verarbeitet. Es bietet Zahlungsautomatisierung und Integration mit verschiedenen Zahlungssystemen.</p>
+                            <p class="accordion-item__content-text">Die folgenden Operationen sind unter einer automatisierten AML-Steuerung verfügbar:</p> 
+                            <ul class="accordion-item__content-list accordion-list">
+                                <li class="accordion-list__el">
+                                    <img alt="icon" src="./assets/images/icons/list-icon.svg">
+                                    <span>Interne Zahlungen</span>
+                                </li>
+                                <li class="accordion-list__el">
+                                    <img alt="icon" src="./assets/images/icons/list-icon.svg">
+                                    <span>Externe ausgehende SEPA-Zahlungen (SCT)</span>
+                                </li>
+                                <li class="accordion-list__el">
+                                    <img alt="icon" src="./assets/images/icons/list-icon.svg">
+                                    <span>Externe ausgehende SWIFT-Zahlungen (MT103)</span>
+                                </li>
+                                <li class="accordion-list__el">
+                                    <img alt="icon" src="./assets/images/icons/list-icon.svg">
+                                    <span>SEPA externer Zahlungseingang (SCT)</span>
+                                </li>
+                                <li class="accordion-list__el">
+                                    <img alt="icon" src="./assets/images/icons/list-icon.svg">
+                                    <span>Externe SWIFT-Zahlungseingänge (MT103)</span>
+                                </li>
+                                <li class="accordion-list__el">
+                                    <img alt="icon" src="./assets/images/icons/list-icon.svg">
+                                    <span>Zahlungen Karten Kauf</span>
+                                </li>
+                                <li class="accordion-list__el">
+                                    <img alt="icon" src="./assets/images/icons/list-icon.svg">
+                                    <span>Zahlungskarten Bargeldabhebung</span>
+                                </li>
+                                <li class="accordion-list__el">
+                                    <img alt="icon" src="./assets/images/icons/list-icon.svg">
+                                    <span>Zahlungen Karten Kredite</span>
+                                </li>
+                                <li class="accordion-list__el">
+                                    <img alt="icon" src="./assets/images/icons/list-icon.svg">
+                                    <span>Top Up-Zahlungsverarbeitung</span>
+                                </li>
+                                <li class="accordion-list__el">
+                                    <img alt="icon" src="./assets/images/icons/list-icon.svg">
+                                    <span>Aufschieben (bedingte Zahlungen)</span>
+                                </li>
+                                <li class="accordion-list__el">
+                                    <img alt="icon" src="./assets/images/icons/list-icon.svg">
+                                    <span>Kommissionszahlungen</span>
+                                </li>
+                                <li class="accordion-list__el">
+                                    <img alt="icon" src="./assets/images/icons/list-icon.svg">
+                                    <span>Währungsumtausch (Kunden und intern)</span>
+                                </li>
+                            </ul>  
+                        </div>
+                    </div>
+                    <div class="accordion-section__right-item accordion-item">
+                        <div class="accordion-item__top">
+                            <p class="accordion-item__top-text" id="tab-6-title">Crypto-Modul</p>
+                            <button class="accordion-item__top-btn" data-tab="tab-6">
+                                <svg width="19" height="19" viewBox="0 0 19 19">
+                                    <rect x="8.14286" width="2.71429" height="19" rx="1.35714" fill="#7E8FFF"/>
+                                    <rect x="19" y="8.14307" width="2.71429" height="19" rx="1.35714" transform="rotate(90 19 8.14307)" fill="#7E8FFF"/>
+                                </svg>
+                            </button>
+                        </div>
+                        <div class="accordion-item__content" id="tab-6">
+                            <p class="accordion-item__content-text">Das Kryptomodul ist ein Subsystem, das in Web- und Mobilanwendungen eingebettet ist und es Kunden ermöglicht, Krypto-Währungen zu empfangen, zu senden, zu speichern und auszutauschen.</p>
+                            <p class="accordion-item__content-text">Funktionelle Subsysteme:</p> 
+                            <ul class="accordion-item__content-list accordion-list">
+                                <li class="accordion-list__el">
+                                    <img alt="icon" src="./assets/images/icons/list-icon.svg">
+                                    <span>Kryptowährungsknoten, die mit Blockketten verbunden sind</span>
+                                </li>
+                                <li class="accordion-list__el">
+                                    <img alt="icon" src="./assets/images/icons/list-icon.svg">
+                                    <span>Multi-Knoten: eine universelle Schnittstelle zwischen Knoten und anderen Anwendungsmodulen</span>
+                                </li>
+                                <li class="accordion-list__el">
+                                    <img alt="icon" src="./assets/images/icons/list-icon.svg">
+                                    <span>Sicheres Speichersystem für die privaten Schlüssel</span>
+                                </li>
+                                <li class="accordion-list__el">
+                                    <img alt="icon" src="./assets/images/icons/list-icon.svg">
+                                    <span>Schnittstelle zu einem Finanzinstitut zur direkten Arbeit mit den Fiat-Währungen</span>
+                                </li>
+                                <li class="accordion-list__el">
+                                    <img alt="icon" src="./assets/images/icons/list-icon.svg">
+                                    <span>Externes Krypto-Währungs-Börsenintegrationsmodul</span>
+                                </li>
+                                <li class="accordion-list__el">
+                                    <img alt="icon" src="./assets/images/icons/list-icon.svg">
+                                    <span>Modul für interne und externe Transfers</span>
+                                </li>
+                                <li class="accordion-list__el">
+                                    <img alt="icon" src="./assets/images/icons/list-icon.svg">
+                                    <span>Währungsumtausch-Modul</span>
+                                </li>
+                                <li class="accordion-list__el">
+                                    <img alt="icon" src="./assets/images/icons/list-icon.svg">
+                                    <span>System der doppelten Buchführung</span>
+                                </li>
+                            </ul>  
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="main-content__banks-section banks-section section" id="banks-section">
+                <h2 class="section-title">Für <span>banken</span></h2>
+                <h5 class="section-subtitle">Modernes hochautomatisiertes Kernbankensystem. Die Module können einzeln oder als schlüsselfertige Komplettlösung erworben werden.</h5>
+                <p class="section-text">Web- und mobile Anwendungen - Kundenzugang zu Finanzprodukten.</p>
+                <p class="section-text">Fintech Application Management System - ein Anwendungsverwaltungssystem mit den folgenden Funktionen:</p>
+                <ul class="section-list">
+                    <img alt="info" class="section-list__icon" id="info-1" src="./assets/images/icons/info-icon.svg">
+                    <li class="section-list__el">Kundenrechteverwaltung zur Initiierung und Bestätigung von Zahlungen</li>
+                    <li class="section-list__el">Unterstützung der verschiedenen Zwei-Faktor-Zahlungsbestätigungslösungen</li>
+                    <li class="section-list__el">Sichere Anwendungsverbindung mit Kernmodulen <span>sicherstellen</span></li>
+                    <img alt="" class="section-list__triangle" id="info-1-tr" src="./assets/images/icons/triangle-icon.svg">
+                    <p class="section-list__info" id="info-1-data"><span>CRM</span> (Customer Relation Module) ist ein modernes, auf den BPM-Prinzipien (Business Process Management) basierendes System, bei dem alle Vorgänge mit Kundendaten und Produkten als Workflow definiert sind und somit eine Standardisierung ihrer Verarbeitung und Interaktion mit externen Systemen ermöglichen.</p>
+                </ul>
+                <p class="section-text">Remote-/On-Board-Kundenregistrierung</p>
+                <p class="section-text">Verifizierung von Kundendaten aus externen Quellen (Blacklists, Scoring usw.)</p>
+                <p class="section-text">Aufrechterhaltung von Verbindungen zwischen Kunden und gesetzlich definierten Produkten</p>
+                <ul class="section-list">
+                    <img alt="info" class="section-list__icon" id="info-2" src="./assets/images/icons/info-icon.svg">
+                    <li class="section-list__el">Webbasierte Schnittstelle, die Endbenutzern einen einheitlichen Zugriff auf alle angeschlossenen <span>Module</span> ermöglicht. Das System erlaubt es, den Zugriff auf komplexe Daten entsprechend den Rechten, die durch Benutzerrollen definiert sind, zu gewähren.</li>
+                    <img alt="" class="section-list__triangle" id="info-2-tr" src="./assets/images/icons/triangle-icon.svg">
+                    <p class="section-list__info" id="info-2-data"><span>Zahlungsmodul</span> - ein Modul für die gesamte Verarbeitung eingehender und ausgehender Zahlungen. Ein modernes System, das auf der Grundlage von BPM-Prinzipien aufgebaut ist. Alle Arten von Zahlungen werden auf der Grundlage von Workflow verarbeitet. Das erlaubt uns, mit jeder Zahlung zusätzliche Metadaten zu speichern (die im Reporting und in der Nachbearbeitung von Zahlungen weiter verwendet werden) und auch externe Aktionen mit jeder Zahlung zu verbinden - wie Überwachungslösungen, Verarbeitung von Zahlungsentscheidungen auf der Grundlage von AML-Regeln.</p>
+                </ul>
+                <p class="section-text">Allgemeiner Zahlungsintegrator mit Workflow-basiertem Zahlungsstatus jeder Zahlungsart</p>
+                <p class="section-text">Interaktion mit Kommunikationsmodulen der Zahlungssysteme (SEPA, SWIFT, MasterCard, VISA, Blockchain)</p>
+                <p class="section-text section-text--banks">
+                    <span>Vorauszahlungen an </span>
+                    <span class="section-text__end">ABS</span>
+                    <img alt="info" class="section-text__icon" src="./assets/images/icons/info-icon.svg">
+                    <img alt="" class="section-text__triangle section-text__triangle--german" id="info-2-tr" src="./assets/images/icons/triangle-icon.svg">
+                    <span class="section-text__info"><span>ABS</span> (Automatic Banking System) - die Verbuchung von Zahlungssystemen gemäß den internationalen Rechnungslegungsstandards, die auf der Grundlage von BPM-Prinzipien aufgebaut ist. Falls erforderlich, interagiert das System mit Kartenfrontsystemen, um gleichwertige finanzielle und verfügbare Guthaben für Kartenprodukte zu erhalten.</span>
+                </p>
+                <p class="section-text">Buchhaltungsoperationen</p>
+                <p class="section-text">Vorbereitung von Finanz- und Aufsichtsberichten</p>
+                <p class="section-text">Erstellung des Jahresberichts mit allen Anträgen</p>
+            </div>
+            <div class="main-content__fintech-section fintech-section section" id="fintech-section">
+                <h2 class="section-title">Für <span>fintech</span></h2>
+                <h5 class="section-subtitle">Unsere Fintech-Lösungen können als White-Label-Ansatz oder als maßgeschneiderte separate Module angeboten werden.</h5>
+                <div class="section-content">
+                    <div class="section-content__left">
+                        <p class="section-text">Krypto-Modul: <span class="section-text__bold">SDK-Modul</span>, das in Client-Anwendungen implementiert werden sollte, um mit dem Crypto-Broker-System zu kommunizieren.</p>
+                        <p class="section-text">Es bietet die folgenden Optionen:</p>
+                        <ul class="section-list">
+                            <li class="section-list__el">Möglichkeit, aktuelle Krypto-Währungsbeträge des Krypto-Broker-Kontos des Kunden anzuzeigen</li>
+                            <li class="section-list__el">Krypto-Krypto-Austausch</li>
+                            <li class="section-list__el">Krypto-Fiat, Fiat-Krypto-Austausch mit der Lieferung von Fiat vom Konto des verbundenen Finanzinstituts des Kunden</li>
+                            <li class="section-list__el">Geschichte der Transaktionen</li>
+                        </ul>
+                        <h6 class="section-text__big">Client-Support-Chat:</h6>
+                        <p class="section-text">das System, das in Client-Anwendungen installiert werden kann und als Kommunikationswerkzeug zwischen Kunden und Finanzorganisation und/oder Kryptobroker dient.</p>
+                        <p class="section-text">Sollte mit folgenden Komponenten verwendet werden:</p>
+                        <ul class="section-list">
+                            <li class="section-list__el">3-stufiger Kundensupport (Möglichkeit, den Kundenchat zwischen verschiedenen Ebenen mit unterschiedlichem Kenntnisstand zu trennen und weiterzuleiten)</li>
+                            <li class="section-list__el">Möglichkeit zur Kommunikation mit Kunden über WhatsApp-Chat</li>
+                            <li class="section-list__el">Manager für die Unterstützung mehrerer Kunden (auch aus der Ferne), die Kundenanfragen bearbeiten, Möglichkeit, einen oder eine Gruppe von Managern zeitweise auszuschließen (wenn sie z.B. im Moment keine Kunden bedienen)</li>
+                        </ul>
+                    </div>
+                    <div class="section-content__right">
+                        <h6 class="section-text__big">Kryptobroker-Backoffice-Lösung:</h6>
+                        <p class="section-text">Das System, das die folgenden Komponenten umfasst:</p>
+                        <ul class="section-list">
+                            <li class="section-list__el">System für doppelte Buchhaltung</li>
+                            <li class="section-list__el">Operationsverarbeitungsmodul mit 'kalten' und 'warmen' Brieftaschen für ein- und ausgehende Blockkettenoperationen</li>
+                            <li class="section-list__el">Externes Krypto-Währungs-Börsenintegrationsmodul</li>
+                            <li class="section-list__el">Berichtsmodul für Abrechnungsdaten</li>
+                            <li class="section-list__el">Modul Bonusprogramm.<br> Wir haben die Möglichkeit, externe Anbieter von Bonusprogrammen in unsere Bankensoftware zu integrieren (um Boni auf der Grundlage der Kundenaktivität auszuzahlen oder Boni innerhalb des Zahlungsworkflows zu verwenden).</li>
+                            <li class="section-list__el">Online-Versicherungsmodul, mit dem Benutzer online Versicherungsangebote einholen, eine Versicherungspolice maßschneidern und sofort abschließen können.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="main-content__crypto-section crypto-section section" id="crypto-section">
+                <h2 class="section-title">Für <span>krypto</span></h2>
+                <h5 class="section-subtitle">K2FINTECH verfügt über weitreichende Kompetenzen in der Krypto-Industrie.</h5>
+                <p class="section-text">Zu den umgesetzten Projekten gehören mehrere Turnkey-Krypto-Börsen. Zusätzlich zur technischen Arbeit an Handelsplattformen hat das Unternehmen alle für die Arbeit erforderlichen regulatorischen Dokumente und Verfahren entwickelt.</p>
+                <ul class="section-list">
+                    <li class="section-list__el section-list__el--crypto">Heute verfügt K2FINTECH über eine <span class="section-list__el--bold">umfangreiche Datenbank</span> mit <span class="section-list__el--bold">vorgefertigten Fällen</span>, um eine Krypto-Börse von Grund auf in jeder geeigneten Gerichtsbarkeit zu starten.</li>
+                    <li class="section-list__el section-list__el--crypto">Eine der <span class="section-list__el--bold">Spezialisierungen</span> von K2FINTECH ist <span class="section-list__el--bold">die Token-Entwicklung</span> und <span class="section-list__el--bold">Token-Emission</span> für verschiedene Zwecke für Kunden, Platzierung an Börsen, volle Unterstützung der ICO und STO Verfahren.</li>
+                </ul>
+                <h6 class="section-text__big section-text__big--upper">"Möchten Sie ein Krypto-Projekt implementieren?</h6>
+                <p class="section-text">Lassen Sie sich von unseren Spezialisten beraten</p>
+                <button class="section-btn btn" id="contacts">Kontakt aufnehmen</button>
+            </div>
+            <div class="main-content__about-section about-section" id="about-section">
+                <h3 class="about-section__title">
+                    <span class="about-section__title-standart">Über uns</span>
+                    <span class="about-section__title-big">K2Fintech</span>
+                </h3>
+                <div class="about-section__people">
+                    <div class="about-section__people-card people-card people-card--german">
+                        <img alt="Anastasiia Kleshcheva" class="people-card__photo" src="./assets/images/people-cards/01.png">
+                        <h6 class="people-card__title">Anastasiia Kleshcheva</h6>
+                        <p class="people-card__subtitle">Geschäftsführerin</p>
+                        <p class="people-card__text">Ein vielseitiger Manager mit zwei europäischen Abschlüssen in Public Relations und Medienwissenschaften.</p>
+                        <p class="people-card__text">Kompetent in der Überwachung ein breites Spektrum an Projekten, von der Talentakquise über die Produktentwicklung bis hin zu wirkungsvollen Werbekampagnen.</p>
+                        <p class="people-card__text">Beherrscht fließend fünf Fremdsprachen und ermöglicht so den Zugang Zugriff auf aktuelle Informationen aus Primärquellen und das Angebot maßgeschneiderter Lösungen für Kunden weltweit</p>
+                    </div>
+                    <div class="about-section__people-card people-card people-card--german">
+                        <img alt="Anastasiia Kleshcheva" class="people-card__photo" src="./assets/images/people-cards/02.png">
+                        <h6 class="people-card__title">Oleg Cernisevs</h6>
+                        <p class="people-card__subtitle">Technischer Direktor</p>
+                        <p class="people-card__subtitle people-card__subtitle--no-margin">Produktentwicklung für den Finanzmarkt</p>
+                        <p class="people-card__text">Ein starker Management-Hintergrund mit Erfahrung auf leitender Ebene auf lokaler/internationaler Ebene und sektorübergreifender Exponiertheit machen die einzigartige Kompetenz gleichzeitig in verschiedenen Bereichen aus: IT-Projektmanagement (Internationale Zahlungssysteme, Kartenzahlungssysteme), Unternehmensbuchhaltung, Kundenbetreuung einschließlich Direct Banking, AML.<span class="people-card__text-span" id="more-1-span">Mit mehr als 20 Jahren...</span></p>
+                        <p class="people-card__text hidden people-card__info-text" id="more-1-info">Mit mehr als 20 Jahren im europäischen Bankwesen und mehr als 15 Jahren im europäischen Bankmanagement.</p>
+                        <button class="people-card__btn" id="more-1">
+                            <span>Read more</span>
+                            <svg width="7" height="13" viewBox="0 0 7 13">
+                                <path d="M6.85576 6.15605L1.05409 0.185618C0.692072 -0.186927 5.1205e-07 0.0388955 4.9184e-07 0.529567L0 12.4704C-2.02105e-08 12.9611 0.69207 13.1869 1.05409 12.8144L6.85576 6.84395C7.04808 6.64603 7.04808 6.35397 6.85576 6.15605Z" fill="#7E8FFF"/>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="about-section__people-card people-card people-card--german">
+                        <img alt="Anastasiia Kleshcheva" class="people-card__photo" src="./assets/images/people-cards/03.png">
+                        <h6 class="people-card__title">Dr. Alfred Orlowsky</h6>
+                        <p class="people-card__subtitle">Mitglied des Aufsichtsrates</p>
+                        <p class="people-card__subtitle people-card__subtitle--no-margin">Steuerberater bei "Schmidt & Partner GmbH"</p>
+                        <p class="people-card__text">Seit 1990 Geschäftsführer und Geschäftsführer von mittelständischen Beratungsunternehmen in Berlin und Brandenburg mit regionalen, überregionalen und internationalen Verbindungen in der Betreuung von Kunden aus Industrie, Handwerk, Dienstleistung, Softwarehäusern und verschiedenen Finanzierungsinstitutionen sowie von Angehörigen der Heilberufe<span class="people-card__text-span" id="more-2-span">..</span>.</p>
+                        <p class="people-card__text hidden people-card__info-text" id="more-2-info">1972 bis 1976 studierte er Betriebswirtschaftslehre mit dem Abschluss Diplom-Ingenieurökonom und promovierte 1987 zum Dr. oec. Von 1984 bis 1990 Oberassistent an der Fachhochschule Cottbus, Fachrichtung Betriebswirtschaft.</p>
+                        <button class="people-card__btn" id="more-2">
+                            <span>Read more</span>
+                            <svg width="7" height="13" viewBox="0 0 7 13">
+                                <path d="M6.85576 6.15605L1.05409 0.185618C0.692072 -0.186927 5.1205e-07 0.0388955 4.9184e-07 0.529567L0 12.4704C-2.02105e-08 12.9611 0.69207 13.1869 1.05409 12.8144L6.85576 6.84395C7.04808 6.64603 7.04808 6.35397 6.85576 6.15605Z" fill="#7E8FFF"/>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="about-section__people-card people-card people-card--german">
+                        <img alt="Anastasiia Kleshcheva" class="people-card__photo" src="./assets/images/people-cards/04.png">
+                        <h6 class="people-card__title">Gabrielle Wahnschapp</h6>
+                        <p class="people-card__subtitle">Mitglied des Aufsichtsrats</p>
+                        <p class="people-card__subtitle people-card__subtitle--no-margin">Anwalt bei "ETL Rechtsanwälte GmbH"</p>
+                        <p class="people-card__text">Langjährige Erfahrung auf dem Gebiet der Rechtsberatung, stets an wirtschaftlichen Überlegungen orientiert, ziel- und lösungsorientiertes Arbeiten, mit besonderen Qualifikationen in den Bereichen Arbeitsrecht, Baurecht, Familienrecht, untermauert durch die Expertise in den genannten Bereichen. <span class="people-card__text-span" id="more-3-span">Dozent für die BTU Cottbus, die Technische Akademie...</span></p>
+                        <p class="people-card__text hidden people-card__info-text" id="more-3-info">Dozent für die BTU Cottbus, die Technische Akademie Wuppertal und die Internationale Wirtschaftsakademie Cottbus.</p>
+                        <button class="people-card__btn" id="more-3">
+                            <span>Read more</span>
+                            <svg width="7" height="13" viewBox="0 0 7 13">
+                                <path d="M6.85576 6.15605L1.05409 0.185618C0.692072 -0.186927 5.1205e-07 0.0388955 4.9184e-07 0.529567L0 12.4704C-2.02105e-08 12.9611 0.69207 13.1869 1.05409 12.8144L6.85576 6.84395C7.04808 6.64603 7.04808 6.35397 6.85576 6.15605Z" fill="#7E8FFF"/>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="main-content__hotspot-section hotspot-section section" id="hotspot-section">
+                <h2 class="section-title section-title--hotspot">Hot<span>spot</span></h2>
+                <h5 class="section-subtitle section-subtitle--hotspot">In dieser einstellung</h5>
+                <p class="section-text section-text--hotspot">Anforderungsspezifikationen für Krypto-Währungsaustausch-Software</p>
+                <p class="section-text section-text--hotspot">Wir haben eine Reihe von Finanzsoftwarelösungen entwickelt, darunter auch eine Kryptogeldbörse.</p>
+                <div class="section-table">
+                    <p class="section-text section-text--table">Sie wurde auf der Grundlage unserer umfangreichen <span class="section-text__bold">Erfahrung</span> and <span class="section-text__bold">Marktforschung entwickelt</span>. Sie kann nicht nur als schlüsselfertige Lösung erworben werden, sondern auch als umfassendes <span class="section-text__bold">Software-Anforderungsspezifikationsdokument</span>, das Ihnen bei der Entwicklung Ihres eigenen Software-Produkts hilft. Es berücksichtigt die Wünsche der überwiegenden Mehrheit der Benutzer und stellt alle notwendigen Informationen zur Verfügung.</p>
+                    <p class="section-text section-text--table section-text--last">This document articulates, in writing, the needed capabilities, functions, innovations, and constraints of a software development project. <span class="section-text__bold">Cryptocurrency exchange software</span> requirement specifications describe all elements (functional and nonfunctional areas), how the software works and interacts with users, and what problems the software will solve.</p>
+                    <div class="section-table__blue">
+                        <p class="section-text section-text--hotspot">Die Software-Anforderungsspezifikationen für den Kryptogeldaustausch beschreiben alle Elemente (funktionale und nichtfunktionale Bereiche), wie die Software funktioniert und mit den Benutzern interagiert und welche Probleme die Software lösen wird.</p>
+                        <p class="section-text section-text--hotspot section-text--no-margin">Dieses Dokument kann Zeit bei der mehrschichtigen Kommunikation im Team sparen, einschließlich Design, Validierung, Testen und allgemeine Benutzerakzeptanz.</p>
+                    </div>
+                </div>
+                <p class="section-text section-text__big section-text--hotspot section-text__big-hotspot">Kontaktieren Sie uns für Beratung oder Kauf:</p>
+                <button class="section-btn--contact">clients@k2fintech.com</button>
+                <p class="section-subtitle section-subtitle--hotspot">Inhaltsverzeichnis:</p>
+                <div class="section-items section-items--german">
+                    <div class="section-items__column">
+                        <div class="section-items__column-item hotspot-item hotspot-item--german" id="hotspot-1-section">
+                            <p class="hotspot-item__text">Positionierung des Krypto-Währungsumtauschs auf dem Markt</p>
+                            <svg width="10" height="18" viewBox="0 0 10 18" class="hotspot-item__icon" id="hotspot-1">
+                                <path d="M9.79394 8.52376L1.50584 0.25701C0.988674 -0.258822 7.315e-07 0.0538553 7.02628e-07 0.733247L0 17.2668C-2.88722e-08 17.9461 0.988672 18.2588 1.50584 17.743L9.79394 9.47624C10.0687 9.20219 10.0687 8.79781 9.79394 8.52376Z" fill="#7E8FFF"/>
+                            </svg>
+                            <div class="hotspot-item__content" id="hotspot-1-info">
+                                <ul class="hotspot-item__content-list hotspot-list">
+                                    <li class="hotspot-list__el">Besonderheiten des Austauschs</li>
+                                    <li class="hotspot-list__el">Marktforschung</li>
+                                    <li class="hotspot-list__el--second">Bestehende Krypto-Währungsumtauschtypen</li>
+                                    <li class="hotspot-list__el--second">Vor- und Nachteile des bestehenden Kryptogeldumtauschs</li>
+                                    <li class="hotspot-list__el--second">Tarifpolitik beim Austausch von Krypto-Währungen</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="section-items__column-item hotspot-item hotspot-item--german" id="hotspot-11-section">
+                            <p class="hotspot-item__text">Architektur des kryptoelektronischen Währungsaustauschs</p>
+                            <svg width="10" height="18" viewBox="0 0 10 18" class="hotspot-item__icon" id="hotspot-11">
+                                <path d="M9.79394 8.52376L1.50584 0.25701C0.988674 -0.258822 7.315e-07 0.0538553 7.02628e-07 0.733247L0 17.2668C-2.88722e-08 17.9461 0.988672 18.2588 1.50584 17.743L9.79394 9.47624C10.0687 9.20219 10.0687 8.79781 9.79394 8.52376Z" fill="#7E8FFF"/>
+                            </svg>
+                            <div class="hotspot-item__content" id="hotspot-11-info">
+                                <ul class="hotspot-item__content-list hotspot-list">
+                                    <li class="hotspot-list__el">Schematische Darstellung der Austauschkomponenten</li>
+                                    <li class="hotspot-list__el">Für das Spiel benötigte Datenbanktabellen</li>
+                                    <li class="hotspot-list__el">System zur Verwaltung von Warteschlangen</li>
+                                    <li class="hotspot-list__el">API</li>
+                                    <li class="hotspot-list__el--second">Autorisierung</li>
+                                    <li class="hotspot-list__el--third">Login</li>
+                                    <li class="hotspot-list__el--third">Sitzungs-Update</li>
+                                    <li class="hotspot-list__el--third">Abmelden</li>
+                                    <li class="hotspot-list__el--second">Allgemeiner Zweck</li>
+                                    <li class="hotspot-list__el--third">Paare</li>
+                                    <li class="hotspot-list__el--third">Zitat</li>
+                                    <li class="hotspot-list__el--third">Buch bestellen</li>
+                                    <li class="hotspot-list__el--third">Transaktionen</li>
+                                    <li class="hotspot-list__el--second">Handels-API</li>
+                                    <li class="hotspot-list__el--second">Bestellung</li>
+                                    <li class="hotspot-list__el--third">Bestellung stornieren</li>
+                                    <li class="hotspot-list__el--third">Bestellstatus</li>
+                                    <li class="hotspot-list__el--second">Zurückziehen</li>
+                                    <li class="hotspot-list__el--third">Status zurückziehen</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="section-items__column-item hotspot-item hotspot-item--german">
+                            <p class="hotspot-item__text">Autorisierungs- und Identifizierungs-Subsystem</p>
+                        </div>
+                        <div class="section-items__column-item hotspot-item hotspot-item--german">
+                            <p class="hotspot-item__text">Verzeichnis-Subsystem</p>
+                        </div>
+                        <div class="section-items__column-item hotspot-item hotspot-item--german">
+                            <p class="hotspot-item__text">Teilsystem Krypto-Geldbörsen</p>
+                        </div>
+                    </div>
+                    <div class="section-items__column">
+                        <div class="section-items__column-item hotspot-item hotspot-item--german" id="hotspot-2-section">
+                            <p class="hotspot-item__text">Untersystem der internen Buchhaltung</p>
+                            <svg width="10" height="18" viewBox="0 0 10 18" class="hotspot-item__icon" id="hotspot-2">
+                                <path d="M9.79394 8.52376L1.50584 0.25701C0.988674 -0.258822 7.315e-07 0.0538553 7.02628e-07 0.733247L0 17.2668C-2.88722e-08 17.9461 0.988672 18.2588 1.50584 17.743L9.79394 9.47624C10.0687 9.20219 10.0687 8.79781 9.79394 8.52376Z" fill="#7E8FFF"/>
+                            </svg>
+                            <div class="hotspot-item__content" id="hotspot-2-info">
+                                <ul class="hotspot-item__content-list hotspot-list">
+                                    <li class="hotspot-list__el">Schematische Darstellung der Austauschkomponenten</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="section-items__column-item hotspot-item hotspot-item--german" id="hotspot-3-section">
+                            <p class="hotspot-item__text">Transaktionsabgleich-Subsystem</p>
+                            <svg width="10" height="18" viewBox="0 0 10 18" class="hotspot-item__icon" id="hotspot-3">
+                                <path d="M9.79394 8.52376L1.50584 0.25701C0.988674 -0.258822 7.315e-07 0.0538553 7.02628e-07 0.733247L0 17.2668C-2.88722e-08 17.9461 0.988672 18.2588 1.50584 17.743L9.79394 9.47624C10.0687 9.20219 10.0687 8.79781 9.79394 8.52376Z" fill="#7E8FFF"/>
+                            </svg>
+                            <div class="hotspot-item__content" id="hotspot-3-info">
+                                <ul class="hotspot-item__content-list hotspot-list">
+                                    <li class="hotspot-list__el">Auftragsarten</li>
+                                    <li class="hotspot-list__el">Bestellungen aufgeben</li>
+                                    <li class="hotspot-list__el">Verarbeitung von Transaktionen</li>
+                                    <li class="hotspot-list__el">Aktivierungslogik von Stop-Limit-Aufträgen</li>
+                                    <li class="hotspot-list__el">Abgleich-Algorithmus</li>
+                                    <li class="hotspot-list__el">Ein Beispiel für die Priorisierung der Auftragsverarbeitung beim Matching</li>
+                                    <li class="hotspot-list__el">Arten von Gebühren</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="section-items__column-item hotspot-item hotspot-item--german">
+                            <p class="hotspot-item__text">Subsystem für die Berichterstattung</p>
+                        </div>
+                        <div class="section-items__column-item hotspot-item hotspot-item--german" id="hotspot-5-section">
+                            <p class="hotspot-item__text">Handelsterminal-Schnittstelle</p>
+                            <svg width="10" height="18" viewBox="0 0 10 18" class="hotspot-item__icon" id="hotspot-5">
+                                <path d="M9.79394 8.52376L1.50584 0.25701C0.988674 -0.258822 7.315e-07 0.0538553 7.02628e-07 0.733247L0 17.2668C-2.88722e-08 17.9461 0.988672 18.2588 1.50584 17.743L9.79394 9.47624C10.0687 9.20219 10.0687 8.79781 9.79394 8.52376Z" fill="#7E8FFF"/>
+                            </svg>
+                            <div class="hotspot-item__content" id="hotspot-5-info">
+                                <ul class="hotspot-item__content-list hotspot-list">
+                                    <li class="hotspot-list__el">Layout der Handelsterminal-Steuerung</li>
+                                    <li class="hotspot-list__el">Währungspaare auswählen</li>
+                                    <li class="hotspot-list__el">Aktuelle Bilanz und Position</li>
+                                    <li class="hotspot-list__el">Buch bestellen</li>
+                                    <li class="hotspot-list__el">Geschichte des Handels</li>
+                                    <li class="hotspot-list__el">Verkauf/Kauf Auftragserteilung</li>
+                                    <li class="hotspot-list__el">Überwachung und Verwaltung von Aufträgen</li>
+                                    <li class="hotspot-list__el">Grafische Darstellung der Handelsgeschichte</li>
+                                    <li class="hotspot-list__el">SWechseln zum Profil des Benutzers</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="section-items__column-item hotspot-item hotspot-item--german" id="hotspot-6-section">
+                            <p class="hotspot-item__text">Technische Anforderungen</p>
+                            <svg width="10" height="18" viewBox="0 0 10 18" class="hotspot-item__icon" id="hotspot-6">
+                                <path d="M9.79394 8.52376L1.50584 0.25701C0.988674 -0.258822 7.315e-07 0.0538553 7.02628e-07 0.733247L0 17.2668C-2.88722e-08 17.9461 0.988672 18.2588 1.50584 17.743L9.79394 9.47624C10.0687 9.20219 10.0687 8.79781 9.79394 8.52376Z" fill="#7E8FFF"/>
+                            </svg>
+                            <div class="hotspot-item__content" id="hotspot-6-info">
+                                <ul class="hotspot-item__content-list hotspot-list">
+                                    <li class="hotspot-list__el">Verbraucher-Metriken</li>
+                                    <li class="hotspot-list__el">Hardware- und Software-Anforderungen</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="section-items__column">
+                        <div class="section-items__column-item hotspot-item hotspot-item--german" id="hotspot-7-section">
+                            <p class="hotspot-item__text">Benutzerprofil-Schnittstelle</p>
+                            <svg width="10" height="18" viewBox="0 0 10 18" class="hotspot-item__icon" id="hotspot-7">
+                                <path d="M9.79394 8.52376L1.50584 0.25701C0.988674 -0.258822 7.315e-07 0.0538553 7.02628e-07 0.733247L0 17.2668C-2.88722e-08 17.9461 0.988672 18.2588 1.50584 17.743L9.79394 9.47624C10.0687 9.20219 10.0687 8.79781 9.79394 8.52376Z" fill="#7E8FFF"/>
+                            </svg>
+                            <div class="hotspot-item__content" id="hotspot-7-info">
+                                <ul class="hotspot-item__content-list hotspot-list">
+                                    <li class="hotspot-list__el">Schnittstelle zur Verifizierung</li>
+                                    <li class="hotspot-list__el">Handelsterminal-Einstellungen</li>
+                                    <li class="hotspot-list__el">Verwaltung von Aufträgen</li>
+                                    <li class="hotspot-list__el">Die Geschichte der Benutzeraufträge</li>
+                                    <li class="hotspot-list__el">Geschichte der Benutzertransaktionen</li>
+                                    <li class="hotspot-list__el">Guthaben - Ein- und Auszahlungen</li>
+                                    <li class="hotspot-list__el--second">Schnittstelle zur Mittelverwaltung</li>
+                                    <li class="hotspot-list__el--second">Wiederauffüllung der Krypto-Währung</li>
+                                    <li class="hotspot-list__el--second">Seite zur Abhebung von Geldern</li>
+                                    <li class="hotspot-list__el--second">Geschichte der Einzahlungen und Abhebungen</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="section-items__column-item hotspot-item hotspot-item--german" id="hotspot-8-section">
+                            <p class="hotspot-item__text">Exchange-Administrator-Konto</p>
+                            <svg width="10" height="18" viewBox="0 0 10 18" class="hotspot-item__icon" id="hotspot-8">
+                                <path d="M9.79394 8.52376L1.50584 0.25701C0.988674 -0.258822 7.315e-07 0.0538553 7.02628e-07 0.733247L0 17.2668C-2.88722e-08 17.9461 0.988672 18.2588 1.50584 17.743L9.79394 9.47624C10.0687 9.20219 10.0687 8.79781 9.79394 8.52376Z" fill="#7E8FFF"/>
+                            </svg>
+                            <div class="hotspot-item__content" id="hotspot-8-info">
+                                <ul class="hotspot-item__content-list hotspot-list">
+                                    <li class="hotspot-list__el">Austausch von Komponenten zur technischen Überwachung und Verwaltung</li>
+                                    <li class="hotspot-list__el">Steuerung von Krypto-Knoten</li>
+                                    <li class="hotspot-list__el">Überwachung und Verwaltung der Warteschlangen für Kryptogeschäfte</li>
+                                    <li class="hotspot-list__el">Überwachung der Kommunikationskanäle</li>
+                                    <li class="hotspot-list__el">Technische Protokolle</li>
+                                    <li class="hotspot-list__el">Sicherung</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="section-items__column-item hotspot-item hotspot-item--german" id="hotspot-9-section">
+                            <p class="hotspot-item__text">Verwaltung kalter Brieftaschen</p>
+                            <svg width="10" height="18" viewBox="0 0 10 18" class="hotspot-item__icon" id="hotspot-9">
+                                <path d="M9.79394 8.52376L1.50584 0.25701C0.988674 -0.258822 7.315e-07 0.0538553 7.02628e-07 0.733247L0 17.2668C-2.88722e-08 17.9461 0.988672 18.2588 1.50584 17.743L9.79394 9.47624C10.0687 9.20219 10.0687 8.79781 9.79394 8.52376Z" fill="#7E8FFF"/>
+                            </svg>
+                            <div class="hotspot-item__content" id="hotspot-9-info">
+                                <ul class="hotspot-item__content-list hotspot-list">
+                                    <li class="hotspot-list__el">Austausch-Manager-Profil</li>
+                                    <li class="hotspot-list__el">Tarif-Einstellungen</li>
+                                    <li class="hotspot-list__el">Segmentierung der Kunden</li>
+                                    <li class="hotspot-list__el">Einzahlung/Abhebung der Tauschmittel</li>
+                                    <li class="hotspot-list__el">Liquiditätsmanagement für kalte Brieftaschen</li>
+                                    <li class="hotspot-list__el">Austausch von Geldern mit Partnerplattformen</li>
+                                    <li class="hotspot-list__el">Bilanzen und Devisenpositionen</li>
+                                    <li class="hotspot-list__el">Verwaltung von Zahlungswarteschlangen</li>
+                                    <li class="hotspot-list__el--second">Verwaltung von Krypto-Zahlungswarteschlangen</li>
+                                    <li class="hotspot-list__el--second">Verwaltung von Fiat-Zahlungswarteschlangen</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="section-items__column-item hotspot-item hotspot-item--german" id="hotspot-10-section">
+                            <p class="hotspot-item__text">Client-Unterstützung Subsystem</p>
+                            <svg width="10" height="18" viewBox="0 0 10 18" class="hotspot-item__icon" id="hotspot-10">
+                                <path d="M9.79394 8.52376L1.50584 0.25701C0.988674 -0.258822 7.315e-07 0.0538553 7.02628e-07 0.733247L0 17.2668C-2.88722e-08 17.9461 0.988672 18.2588 1.50584 17.743L9.79394 9.47624C10.0687 9.20219 10.0687 8.79781 9.79394 8.52376Z" fill="#7E8FFF"/>
+                            </svg>
+                            <div class="hotspot-item__content" id="hotspot-10-info">
+                                <ul class="hotspot-item__content-list hotspot-list">
+                                    <li class="hotspot-list__el">Unterstützung durch persönliche Kundenbetreuer</li>
+                                    <li class="hotspot-list__el">Workflow-Einstellungen unterstützen</li>
+                                    <li class="hotspot-list__el">Protokolle</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="main-content__contacts-section contacts-section section" id="contacts-section">
+                <h2 class="section-title section-title--contacts">Wenn Sie noch <span>Fragen</span> haben</h2>
+                <p class="section-text section-text__big section-text__big--contacts">Bitte füllen Sie das Feedback-Formular aus und unser Manager wird Sie so schnell wie möglich kontaktieren</p>
+                <form action="{{ FORM_URL }}" class="section-form" target="votar">
+                    <div class="section-form__input">
+                        <input class="section-form__input-field" name="name" id="name" placeholder="Ihrer name" type="text">
+                        <p class="section-form__input-empty" id="name-text">Dieses Feld ist erforderlich <span>*</span></p>
+                    </div>
+                    <div class="section-form__input">
+                        <input class="section-form__input-field" name="email" id="email" placeholder="Ihrer e-mail" type="email" inputmode="email">
+                        <p class="section-form__input-empty" id="email-text">Dieses Feld ist erforderlich <span>*</span></p>
+                    </div>
+                    <div class="section-form__input">
+                        <textarea class="section-form__input-field section-form__input-field--message" id="message" placeholder="Nachricht" name="message"></textarea>
+                    </div>
+                    <div class="section-form__input">
+                        <input class="section-form__input-checkbox" id="checkbox" type="checkbox">
+                        <label class="section-form__input-label" for="checkbox">Ich habe die gelesen und bin damit einverstanden <a href="{{ PRIVACY_POLICY_DE_URL }}">datenschutzerklärung</a></label>
+                    </div>
+                </form>
+                <button class="section-btn btn" id="contact-btn">Kontakt aufnrhmen</button>
+                <iframe name="votar" style="display:none;"></iframe>
+            </div>
+        </main>
+        <footer class="main-footer">
+            <a class="main-footer__top" href="{{ IMPRESSUM }}">IMPRESSUM</a>
+            <p class="main-footer__bottom">Für die Bewerbung bei der Arbeit <span>career@k2fintech.com</span></p>
+        </footer>
+    </div>
+    <div class="notify">
+        <svg class="notify__icon" width="30" height="23" viewBox="0 0 30 23">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M29.1204 0.840989C29.6836 1.38017 30 2.11106 30 2.8731C30 3.63515 29.6836 4.36603 29.1204 4.90522L11.0738 22.159C10.5098 22.6975 9.74534 23 8.94828 23C8.15121 23 7.38674 22.6975 6.82279 22.159L0.807252 16.4077C0.27596 15.8626 -0.0132798 15.1416 0.000468598 14.3966C0.014217 13.6516 0.32988 12.9408 0.880955 12.414C1.43203 11.8871 2.17549 11.5853 2.95471 11.5722C3.73392 11.559 4.48806 11.8356 5.05823 12.3435L8.94828 16.0627L24.8694 0.840989C25.4333 0.302477 26.1978 0 26.9949 0C27.7919 0 28.5564 0.302477 29.1204 0.840989Z" fill="#0FA958"/>
+        </svg>
+        <p class="notify__text">Success</p>
+    </div>
+</body>
+<!-- Connecting Slick Slider -->
+<script type="text/javascript" src="./js/slick.min.js"></script>
+<!-- Connecting JavaScript -->
+<script src="./js/main.js"></script>
+<script src="./js/slider.js"></script>
+</html>
